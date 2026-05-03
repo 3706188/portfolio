@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pei-Ying Chou — Portfolio</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <!-- 語言轉換 -->
+    <div class="lang-switcher" id="langSwitcher">
+      <button
+        class="lang-globe"
+        id="langGlobeBtn"
+        aria-label="Switch language"
+        aria-expanded="false"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+          <path d="M2 12h20" />
+        </svg>
+        <span class="lang-current" id="langCurrent">EN</span>
+        <!-- 小箭頭，CSS 控制旋轉 -->
+        <svg
+          class="lang-arrow"
+          xmlns="http://www.w3.org/2000/svg"
+          width="12"
+          height="12"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="m6 9 6 6 6-6" />
+        </svg>
+      </button>
+
+      <!-- 下拉選單 -->
+      <div class="lang-dropdown" id="langDropdown" role="menu">
+        <button class="lang-option active" data-lang="en" role="menuitem">
+          <span class="lang-flag">🇺🇸</span>
+          <span>English</span>
+        </button>
+        <button class="lang-option" data-lang="zh" role="menuitem">
+          <span class="lang-flag">🇹🇼</span>
+          <span>中文</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="layout">
+      <!--LEFT SIDEBAR-->
+      <aside class="sidebar">
+        <div class="avatar-wrap">
+          <img
+            src="/assets/pei-ying-icon.jpg"
+            alt="Profile photo of Pei-Ying Chou"
+            class="avatar"
+          />
+          <div class="icon-ring"></div>
+        </div>
+
+        <h1 class="name">Pei-Ying<br /><em>Chou</em></h1>
+        <p class="role" data-en="Junior Frontend Engineer" data-zh="前端工程師">
+          Junior Frontend Engineer
+        </p>
+        <p
+          class="bio"
+          data-en="I love turning ideas into clean, thoughtful web experiences. Currently learning, building, and growing every day."
+          data-zh="我喜歡將想法轉化為簡潔、有質感的網頁體驗，目前持續學習與成長中。"
+        >
+          I love turning ideas into clean, thoughtful web experiences. Currently
+          learning, building, and growing every day.
+        </p>
+
+        <div class="divider"></div>
+        <div class="links" aria-label="Contact and social links">
+          <a href="mailto:lucy3706184@gmail.com" class="link-item">
+            <svg
+              class="link-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            lucy3706184@gmail.com
+          </a>
+          <a
+            href="https://github.com/3706188"
+            class="link-item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="link-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+              />
+              <path d="M9 18c-4.51 2-5-2-7-2" />
+            </svg>
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/pei-ying-chou-2513ba3b7"
+            class="link-item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="link-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+              />
+              <rect width="4" height="12" x="2" y="9" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+        <div class="divider"></div>
+        <!--TAGS-->
+        <section aria-label="Skills">
+          <p class="section-label" data-en="Skills" data-zh="技能">Skills</p>
+          <div class="skill-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Java</span>
+            <span class="tag">Git</span>
+            <span class="tag">Responsive</span>
+          </div>
+        </section>
+      </aside>
+      <!--RIGHT CONTENT-->
+      <main>
+        <header class="page-header">
+          <p class="sub-title" data-en="Portfolio" data-zh="作品集">
+            Portfolio
+          </p>
+          <h2 class="title">
+            <span data-en="My Recent" data-zh="我的近期">My Recent</span>
+            <em><span data-en="Projects" data-zh="專案">Projects</span></em>
+          </h2>
+          <p
+            class="section-sub"
+            data-en="A collection of things I've built while learning and exploring frontend development."
+            data-zh="這裡收錄了我在學習前端開發過程中建立的作品。"
+          >
+            A collection of things I've built while learning and exploring
+            frontend development.
+          </p>
+        </header>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image-wrap">
+              <img
+                src="/assets/accommadation.png"
+                alt="Accommodation Web App"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <a
+                  href="https://3706188.github.io/Tianzhong-accommodation/"
+                  class="overlay-btn"
+                  data-en="View Project ↗"
+                  data-zh="查看專案 ↗"
+                  >View Project ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-tag">Web App</span>
+                <span class="project-tag">UI Design</span>
+              </div>
+              <h3
+                class="project-name"
+                data-en="Accommodation Web"
+                data-zh="住宿訂房網站"
+              >
+                Accommadation Web
+              </h3>
+              <p
+                class="project-desc"
+                data-en="A convenient accommodation search website for Tianzhong Marathon participants, featuring both free public lodging and regular hotels. Built with RWD responsive layout to ensure a smooth browsing experience on both mobile and desktop. Implemented pagination logic in JavaScript to help users efficiently browse through multiple accommodation listings. Established the foundational site structure and UI design to enhance the overall user experience."
+                data-zh="提供田中馬拉松參賽者更方便快速的住宿查詢網站，包含免費提供的公共住所或是一般旅館。設計 RWD 響應式版面，確保手機與電腦端皆有良好瀏覽體驗。使用 JavaScript 實作分頁邏輯，讓使用者能快速瀏覽多筆住宿資料。建立基礎網站結構與 UI 設計，強化使用者瀏覽體驗。"
+              >
+                A convenient accommodation search website for Tianzhong Marathon
+                participants, featuring both free public lodging and regular
+                hotels. Built with RWD responsive layout to ensure a smooth
+                browsing experience on both mobile and desktop. Implemented
+                pagination logic in JavaScript to help users efficiently browse
+                through multiple accommodation listings. Established the
+                foundational site structure and UI design to enhance the overall
+                user experience.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-image-wrap">
+              <img
+                src="/assets/culturepro.png"
+                alt="Culture Web App"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <a
+                  href="https://tian-zhong-website.infinityfreeapp.com/?i=1"
+                  class="overlay-btn"
+                  data-en="View Project ↗"
+                  data-zh="查看專案 ↗"
+                  >View Project ↗</a
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-tag">Web App</span>
+                <span class="project-tag">Education</span>
+              </div>
+              <h3
+                class="project-name"
+                data-en="Culture Web"
+                data-zh="文化探索網站"
+              >
+                Culture Web
+              </h3>
+              <p
+                class="project-desc"
+                data-en="A local culture showcase website promoting Tianzhong's unique characteristics and tourism resources. Designed the navigation bar and page layout using Flexbox, implemented an image carousel, and integrated Google Maps API to display Tianzhong's location. Set up a MySQL database and used PHP to fetch member data."
+                data-zh="建立地方文化展示網站，推廣田中在地特色與觀光資源。使用 Flexbox 設計導覽列與頁面布局，實作圖片輪播功能，結合 Google Maps API 顯示田中所在地。架設 MySQL 資料庫使用 PHP 抓取會員資料。"
+              >
+                A local culture showcase website promoting Tianzhong's unique
+                characteristics and tourism resources. Designed the navigation
+                bar and page layout using Flexbox, implemented an image
+                carousel, and integrated Google Maps API to display Tianzhong's
+                location. Set up a MySQL database and used PHP to fetch member
+                data.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span
+                ><span>MySQL</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image-wrap">
+              <img
+                src="/assets/java.png"
+                alt="Java Hit Mole Game"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <a
+                  href="https://github.com/3706188/whack-a-mole-java"
+                  class="overlay-btn"
+                  data-en="View Project ↗"
+                  data-zh="查看專案 ↗"
+                  >View Project ↗</a
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-tag">Game</span>
+                <span class="project-tag">Java</span>
+              </div>
+              <h3 class="project-name">Java Whac-A-Mole Game</h3>
+              <p
+                class="project-desc"
+                data-en="A classic Whac-A-Mole game built with Java Swing, utilizing loops and conditional logic to implement core game mechanics including random mole generation, a scoring system, and time control."
+                data-zh="使用 Java Swing 開發的經典打地鼠遊戲，運用迴圈與條件判斷設計遊戲機制(隨機生成、計分系統、時間控制)。"
+              >
+                A classic Whac-A-Mole game built with Java Swing, utilizing
+                loops and conditional logic to implement core game mechanics
+                including random mole generation, a scoring system, and time
+                control.
+              </p>
+              <div class="project-tech">
+                <span>Java</span><span>Swing</span><span>OOP</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <footer>
+          <p
+            data-en="Open to internships &amp; junior roles · Based in Taiwan 🇹🇼"
+            data-zh="歡迎實習與初階職缺洽詢 · 位於台灣 🇹🇼"
+          >
+            Open to internships &amp; junior roles · Based in Taiwan 🇹🇼
+          </p>
+        </footer>
+      </main>
+    </div>
+    <script>
+      const globeBtn = document.getElementById("langGlobeBtn");
+      const dropdown = document.getElementById("langDropdown");
+      const langCurrent = document.getElementById("langCurrent");
+      const options = document.querySelectorAll(".lang-option");
+
+      function toggleDropdown(forceClose = false) {
+        const isOpen = dropdown.classList.contains("open");
+        if (forceClose || isOpen) {
+          dropdown.classList.remove("open");
+          globeBtn.setAttribute("aria-expanded", "false");
+        } else {
+          dropdown.classList.add("open");
+          globeBtn.setAttribute("aria-expanded", "true");
+        }
+      }
+      globeBtn.addEventListener("click", (e) => {
+        e.stopPropagation(); // 阻止事件冒泡到 document
+        toggleDropdown();
+      });
+
+      document.addEventListener("click", () => toggleDropdown(true));
+
+      function switchLang(lang) {
+        // 1. 更新所有有 data-en 屬性的文字元素
+        document.querySelectorAll("[data-en]").forEach((el) => {
+          el.textContent = el.dataset[lang];
+        });
+        // 2. 更新懸浮按鈕顯示的語言縮寫
+        langCurrent.textContent = lang === "en" ? "EN" : "中";
+        // 3. 更新哪個選項是 active（加底線）
+        options.forEach((btn) => {
+          btn.classList.toggle("active", btn.dataset.lang === lang);
+        });
+        // 4. 更新 <html lang> 屬性
+        document.documentElement.lang = lang === "en" ? "en" : "zh-TW";
+        // 5. 更新頁籤標題
+        document.title =
+          lang === "en" ? "Pei-Ying Chou — Portfolio" : "周佩穎 — 作品集";
+        // 6. 存入 localStorage，下次重新整理記得選擇
+        localStorage.setItem("lang", lang);
+        // 7. 選完後關閉下拉選單
+        toggleDropdown(true);
+      }
+
+      options.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          switchLang(btn.dataset.lang);
+        });
+      });
+
+      // =============================================
+      // 頁面載入：讀取 localStorage 的語言設定
+      // =============================================
+      const savedLang = localStorage.getItem("lang") || "en";
+      if (savedLang === "zh") switchLang("zh");
+    </script>
+  </body>
+</html>
